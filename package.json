@@ -1,8 +1,25 @@
 {
-  "name": "hush",
-  "displayName": "Hush",
+  "name": "hush-theme",
+  "displayName": "Hush Theme",
   "description": "Slick color theme without overwhelming colors",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "nobilissimum",
+  "author": {
+    "name": "nobilissimum"
+  },
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#202733",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/nobilissimum/hush/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/nobilissimum/hush/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nobilissimum/hush"
+  },
   "engines": {
     "vscode": "^1.81.0"
   },

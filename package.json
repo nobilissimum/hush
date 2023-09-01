@@ -1,0 +1,31 @@
+{
+  "name": "hush",
+  "displayName": "Hush",
+  "description": "Slick color theme without overwhelming colors",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Hush",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Hush-color-theme.json"
+      },
+      {
+        "label": "Hush Atom",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Hush Atom-color-theme.json"
+      },
+      {
+        "label": "Hush Vibrant",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Hush Vibrant-color-theme.json"
+      }
+    ]
+  }
+}

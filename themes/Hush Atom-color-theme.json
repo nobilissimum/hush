@@ -919,7 +919,7 @@
         "meta.definition.variable.name.java"
       ],
       "settings": {
-        "foreground": "#e3adb1"
+        "foreground": "#d9777d"
       }
     },
     {
@@ -980,7 +980,7 @@
         "support.constant.math"
       ],
       "settings": {
-        "foreground": "#d5bfe4"
+        "foreground": "#a980c4"
       }
     },
     {
@@ -990,7 +990,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#d5bfe4"
+        "foreground": "#a980c4"
       }
     },
     {

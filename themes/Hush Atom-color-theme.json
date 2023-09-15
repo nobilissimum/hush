@@ -4,6 +4,7 @@
     "activityBar.activeBorder": "#009688",
     "activityBar.background": "#20292e",
     "activityBar.foreground": "#a7b6b8",
+    "button.secondaryBackground": "#009688",
     "activityBarBadge.background": "#009688",
     "commandCenter.activeBorder": "#00000000",
     "commandCenter.border": "#00000000",

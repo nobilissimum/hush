@@ -1,5 +1,4 @@
 {
-  "name": "Nobilissimus Pale Vibrant",
   "colors": {
     "activityBar.activeBorder": "#009688",
     "activityBar.background": "#0D1C2B",
@@ -78,9 +77,12 @@
     "sideBarSectionHeader.background": "#0D1C2B",
     "sideBarSectionHeader.foreground": "#a7b6b8",
     "sideBarTitle.foreground": "#bbbbbb",
-    "statusBar.background": "#182333",
-    "statusBar.border": "#00000033",
+    "statusBar.background": "#0D1C2B",
+    "statusBar.border": "#00000000",
+    "statusBar.focusBorder": "#00000000",
     "statusBar.foreground": "#a7b6b8",
+    "statusBarItem.hoverBackground": "#ffffff11",
+    "statusBarItem.hoverForeground": "#ffffff",
     "tab.activeBackground": "#1B2738",
     "tab.activeBorder": "#00000000",
     "tab.activeForeground": "#eeffff",
@@ -112,6 +114,7 @@
     "widget.shadow": "#00000000",
     "window.inactiveBorder": "#00000000"
   },
+  "name": "Nobilissimus Pale Vibrant",
   "tokenColors": [
     {
       "scope": [

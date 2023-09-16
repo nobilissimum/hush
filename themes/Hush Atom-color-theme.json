@@ -1,13 +1,7 @@
 {
-  "name": "Nobilissimus Pale Atom",
   "colors": {
     "activityBar.activeBorder": "#009688",
     "activityBar.background": "#20292e",
-    "statusBar.background": "#20292e",
-    "statusBar.border": "#00000000",
-    "statusBar.focusBorder": "#00000000",
-    "statusBarItem.hoverForeground": "#ffffff",
-    "statusBarItem.hoverBackground": "#ffffff11",
     "activityBar.foreground": "#a7b6b8",
     "activityBarBadge.background": "#009688",
     "button.background": "#009688",
@@ -81,7 +75,12 @@
     "sideBarSectionHeader.background": "#20292e",
     "sideBarSectionHeader.foreground": "#a7b6b8",
     "sideBarTitle.foreground": "#bbbbbb",
+    "statusBar.background": "#20292e",
+    "statusBar.border": "#00000000",
+    "statusBar.focusBorder": "#00000000",
     "statusBar.foreground": "#a7b6b8",
+    "statusBarItem.hoverBackground": "#ffffff11",
+    "statusBarItem.hoverForeground": "#ffffff",
     "tab.activeBackground": "#263238",
     "tab.activeBorder": "#00000000",
     "tab.activeForeground": "#eeffff",
@@ -111,8 +110,9 @@
     "titleBar.border": "#00000000",
     "titleBar.inactiveBackground": "#20292e",
     "widget.shadow": "#00000000",
-    "window.inactiveBorder": "#00000000",
+    "window.inactiveBorder": "#00000000"
   },
+  "name": "Nobilissimus Pale Atom",
   "tokenColors": [
     {
       "scope": [

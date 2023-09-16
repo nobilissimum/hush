@@ -1,0 +1,25 @@
+name: Validate JSONs
+
+run-name: ${{ github.actor }} is validating JSON files
+
+on:
+  pull_request:
+    branches:
+      - main
+      - colors
+      - tokens
+  push:
+    branches:
+      - main
+      - colors
+      - tokens
+
+jobs:
+  validate-jsons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: actions/json-syntax-check
+        uses: limitusus/json-syntax-check@v2
+        with:
+          pattern: "\\.json$"

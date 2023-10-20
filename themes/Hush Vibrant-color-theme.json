@@ -62,6 +62,8 @@
     "panel.border": "#00000000",
     "panelSection.dropBackground": "#00000000",
     "panelTitle.activeBorder": "#009688",
+    "peekView.border": "#0D1C2B",
+    "peekViewEditor.background": "#182333",
     "peekViewResult.background": "#0D1C2B",
     "peekViewTitle.background": "#0D1C2B",
     "pickerGroup.border": "#009688",

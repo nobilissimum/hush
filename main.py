@@ -1,5 +1,5 @@
 from json import dumps, loads
-from os import scandir
+from os import makedirs, scandir
 from os.path import splitext
 from sys import argv
 
@@ -110,6 +110,7 @@ def create_theme(
     theme["colors"] = dict(sorted(theme_colors.items()))
     theme["tokenColors"] = theme_token_colors
 
+    makedirs("./themes", exist_ok=True)
     with open(f"./themes/{name}{THEME_FILE_EXTENSION}", "w") as file:
         file.write(dumps(theme, indent=2))
 

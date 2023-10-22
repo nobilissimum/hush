@@ -3,7 +3,10 @@ from sys import argv
 
 FILE_LOCALS = locals()
 
-def extract_color_names() -> None:
+THEME_NAME = "Hush"
+THEME_FILE_EXTENSION = "-color-theme.json"
+
+def extract_color_names() -> dict:
     config = None
     with open("./src/config.json") as file:
         config = loads(file.read())
@@ -22,9 +25,122 @@ def extract_color_names() -> None:
     with open("./colors.hidden.json", "w+") as file:
         file.write(dumps(colors))
 
+    return colors
+
+
+def test_colors_config(
+    config: dict,
+    name: str,
+) -> None:
+    scopes = []
+    scopes_with_dupes = []
+
+    for scopes in config.get("colors", {}).values():
+        for scope in scopes:
+            if scope not in scopes:
+                scopes.append(scope)
+                continue
+
+            scopes_with_dupes.append(scope)
+
+    if scopes_with_dupes:
+        scope_with_dupes = "\n".join(scopes_with_dupes)
+        error_message = f"Name: {name}\nScopes:\n{scope_with_dupes}"
+        raise AssertionError(error_message)
+
+
+def test_token_colors_config(
+    config: dict,
+    name: str,
+) -> None:
+    scopes = []
+    scopes_with_dupes = []
+
+    for config_groups in config.get("tokenColors", {}).values():
+        for config_group in config_groups:
+            font_style = config_group.get("fontStyle", None)
+            for scope in config_group.get("scopes", []):
+                scope_setting = (scope, font_style)
+                if scope_setting not in scopes:
+                    scopes.append(scope_setting)
+                    continue
+
+                scopes_with_dupes.append(scope)
+
+    if scopes_with_dupes:
+        scope_with_dupes = "\n".join(scopes_with_dupes)
+        error_message = f"Name: {name}\nToken scopes:\n{scope_with_dupes}"
+        raise AssertionError(error_message)
+
+
+def create_theme(
+    colors: dict,
+    config: dict,
+    name: str,
+) -> dict:
+    theme = {}
+    theme_colors = {}
+    theme_token_colors = []
+
+    for color_name, color_scopes in config.get("colors", {}).items():
+        color = colors.get(color_name, None)
+        if color is None:
+            continue
+
+        for color_scope in color_scopes:
+            theme_colors[color_scope] = color
+
+    for color_name, config_groups in config.get("tokenColors", {}).items():
+        token_color = {}
+        color = colors.get(color_name, None)
+
+        if color is None:
+            continue
+
+        for config_group in config_groups:
+            settings = {}
+            token_color["scope"] = config_group.get("scope", [])
+            settings["foreground"] = color
+
+            font_style = config_group.get("fontStyle", None)
+            if font_style is not None:
+                settings["fontStyle"] = font_style
+
+            token_color["settings"] = settings
+            theme_token_colors.append(token_color)
+
+    theme["colors"] = theme_colors
+    theme["tokenColors"] = theme_token_colors
+
+    with open(f"./themes/{name}{THEME_FILE_EXTENSION}", "w") as file:
+        file.write(dumps(theme))
+
+    return theme
+
+
+def create_variant_theme_file() -> None:
+    pass
+
+
+def create_theme_files() -> None:
+    base = None
+    with open("./src/base.json") as file:
+        base = loads(file.read())
+
+    config = None
+    with open("./src/config.json") as file:
+        config = loads(file.read())
+
+    create_theme(
+        colors=base,
+        config=config,
+        name=THEME_NAME,
+    )
+
 
 def main() -> None:
-    pass
+    create_theme_files()
+
 
 def _main() -> None:
     arguments = argv

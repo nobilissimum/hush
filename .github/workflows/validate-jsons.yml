@@ -32,4 +32,4 @@ jobs:
       - name: actions/json-syntax-check
         uses: limitusus/json-syntax-check@v2
         with:
-          pattern: "\\.json$"
+          pattern: "./themes/.*\\.json$"

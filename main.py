@@ -99,7 +99,9 @@ def create_theme(
 
         for config_group in config_groups:
             settings = {}
-            token_color["scope"] = config_group.get("scope", [])
+            config_group_scope = config_group.get("scope", [])
+            config_group_scope.sort()
+            token_color["scope"] = config_group_scope
             settings["foreground"] = color
 
             font_style = config_group.get("fontStyle", None)
@@ -109,11 +111,11 @@ def create_theme(
             token_color["settings"] = settings
             theme_token_colors.append(token_color)
 
-    theme["colors"] = theme_colors
+    theme["colors"] = dict(sorted(theme_colors.items()))
     theme["tokenColors"] = theme_token_colors
 
     with open(f"./themes/{name}{THEME_FILE_EXTENSION}", "w") as file:
-        file.write(dumps(theme))
+        file.write(dumps(theme, indent=2))
 
     return theme
 

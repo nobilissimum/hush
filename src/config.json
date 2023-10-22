@@ -1,0 +1,186 @@
+{
+  "colors": {
+    "accentColorA": [
+      "activityBar.activeBorder",
+      "activityBarBadge.background",
+      "badge.background",
+      "button.background",
+      "editorCursor.foreground",
+      "editorSuggestWidget.selectedBackground",
+      "list.activeSelectionBackground",
+      "list.inactiveFocusBackground",
+      "panelTitle.activeBorder",
+      "pickerGroup.border",
+      "pickerGroup.foreground"
+    ],
+    "accentColorTransluscentA": [
+      "editor.findMatchBackground"
+    ],
+    "ansiBlack": [
+      "terminal.ansiBlack"
+    ],
+    "ansiBlue": [
+      "terminal.ansiBlue",
+      "terminal.ansiBrightBlue"
+    ],
+    "ansiBrightBlack": [
+      "terminal.ansiBrightBlack"
+    ],
+    "ansiCyan": [
+      "terminal.ansiBrightCyan",
+      "terminal.ansiCyan"
+    ],
+    "ansiGreen": [
+      "terminal.ansiBrightGreen",
+      "terminal.ansiGreen",
+      "gitDecoration.untrackedResourceForeground"
+    ],
+    "ansiMagenta": [
+      "terminal.ansiBrightMagenta",
+      "terminal.ansiMagenta",
+      "gitDecoration.deletedResourceForeground"
+    ],
+    "ansiRed": [
+      "terminal.ansiBrightRed",
+      "terminal.ansiRed",
+      "gitDecoration.conflictingResourceForeground"
+    ],
+    "ansiWhite": [
+      "terminal.ansiBrightWhite",
+      "terminal.ansiWhite"
+    ],
+    "ansiYellow": [
+      "terminal.ansiBrightYellow",
+      "terminal.ansiYellow",
+      "gitDecoration.modifiedResourceForeground"
+    ],
+    "blackTransluscentA": [
+      "editor.lineHighlightBackground"
+    ],
+    "blackTransluscentB": [
+      "menu.border",
+      "menu.separatorBackground"
+    ],
+    "blackTransluscentC": [
+      "scrollbarSlider.background"
+    ],
+    "blackTransluscentD": [
+      "scrollbarSlider.hoverBackground"
+    ],
+    "dark": [
+      "activityBar.background",
+      "debugToolBar.background",
+      "dropdown.background",
+      "input.background",
+      "panel.background",
+      "peekView.border",
+      "peekViewResult.background",
+      "peekViewTitle.background",
+      "sideBarSectionHeader.background",
+      "statusBar.background",
+      "terminal.background",
+      "titleBar.activeBackground",
+      "titleBar.inactiveBackground",
+      "editorSuggestWidget.background",
+      "editorSuggestWidget.border",
+      "editorWidget.border"
+    ],
+    "greyA": [
+      "editor.foreground",
+      "terminal.foreground"
+    ],
+    "greyB": [
+      "editorSuggestWidget.foreground",
+      "editorSuggestWidget.highlightForeground"
+    ],
+    "greyC": [
+      "sideBarTitle.foreground"
+    ],
+    "indigo": [
+      "editorOverviewRuler.findMatchForeground"
+    ],
+    "light": [
+      "editor.background",
+      "tab.activeBackground"
+    ],
+    "main": [
+      "editorGroupHeader.tabsBackground",
+      "editorWidget.background",
+      "peekViewEditor.background",
+      "sideBar.background",
+      "tab.inactiveBackground"
+    ],
+    "negativeTransluscentA": [
+      "diffEditor.removedTextBackground"
+    ],
+    "positiveTransluscentA": [
+      "diffEditor.insertedTextBackground"
+    ],
+    "transparent": [
+      "commandCenter.activeBorder",
+      "commandCenter.border",
+      "commandCenter.inactiveBorder",
+      "editorGroup.dropBackground",
+      "focusBorder",
+      "inlineChat.shadow",
+      "list.dropBackground",
+      "listFilterWidget.shadow",
+      "menu.selectionBorder",
+      "panel.border",
+      "panelSection.dropBackground",
+      "scrollbar.shadow",
+      "sideBar.border",
+      "sideBar.dropBackground",
+      "statusBar.border",
+      "statusBar.focusBorder",
+      "tab.activeBorder",
+      "tab.border",
+      "terminal.dropBackground",
+      "titleBar.border",
+      "widget.shadow",
+      "window.inactiveBorder",
+      "editorBracketMatch.border"
+    ],
+    "white": [
+      "activityBar.foreground",
+      "input.foreground",
+      "statusBarItem.hoverForeground",
+      "tab.activeForeground",
+      "list.highlightForeground"
+    ],
+    "whiteSemi": [
+      "list.inactiveSelectionForeground",
+      "list.activeSelectionForeground"
+    ],
+    "whiteTransluscentA": [
+      "list.hoverBackground",
+      "editorBracketMatch.background",
+      "statusBarItem.hoverBackground"
+    ],
+    "whiteTransluscentB": [
+      "button.secondaryBackground",
+      "editor.selectionBackground",
+      "editorLineNumber.foreground",
+      "scrollbarSlider.activeBackground",
+      "editor.findMatchHighlightBackground",
+      "editor.selectionHighlightBackground"
+    ],
+    "whiteTransluscentC": [
+      "activityBar.inactiveForeground",
+      "list.inactiveSelectionBackground"
+    ],
+    "whiteTransluscentD": [
+      "tab.inactiveForeground",
+      "gitDecoration.ignoredResourceForeground",
+      "input.placeholderForeground",
+      "list.focusBackground"
+    ],
+    "whiteTransluscentE": [
+      "sideBar.foreground",
+      "list.hoverForeground",
+      "sideBarSectionHeader.foreground",
+      "statusBar.foreground"
+    ]
+  },
+  "tokens": {}
+}

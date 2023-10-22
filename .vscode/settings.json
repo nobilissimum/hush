@@ -1,0 +1,19 @@
+{
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.wordBasedSuggestions": false,
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ]
+  },
+}

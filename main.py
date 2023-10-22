@@ -1,4 +1,6 @@
 from json import dumps, loads
+from os import scandir
+from os.path import splitext
 from sys import argv
 
 FILE_LOCALS = locals()
@@ -28,10 +30,7 @@ def extract_color_names() -> dict:
     return colors
 
 
-def test_colors_config(
-    config: dict,
-    name: str,
-) -> None:
+def test_colors_config(config: dict) -> None:
     scopes = []
     scopes_with_dupes = []
 
@@ -45,14 +44,11 @@ def test_colors_config(
 
     if scopes_with_dupes:
         scope_with_dupes = "\n".join(scopes_with_dupes)
-        error_message = f"Name: {name}\nScopes:\n{scope_with_dupes}"
+        error_message = f"Scopes:\n{scope_with_dupes}"
         raise AssertionError(error_message)
 
 
-def test_token_colors_config(
-    config: dict,
-    name: str,
-) -> None:
+def test_token_colors_config(config: dict) -> None:
     scopes = []
     scopes_with_dupes = []
 
@@ -69,7 +65,7 @@ def test_token_colors_config(
 
     if scopes_with_dupes:
         scope_with_dupes = "\n".join(scopes_with_dupes)
-        error_message = f"Name: {name}\nToken scopes:\n{scope_with_dupes}"
+        error_message = f"Token scopes:\n{scope_with_dupes}"
         raise AssertionError(error_message)
 
 
@@ -120,10 +116,6 @@ def create_theme(
     return theme
 
 
-def create_variant_theme_file() -> None:
-    pass
-
-
 def create_theme_files() -> None:
     base = None
     with open("./src/base.json") as file:
@@ -138,6 +130,24 @@ def create_theme_files() -> None:
         config=config,
         name=THEME_NAME,
     )
+
+    with scandir("./src/themes") as directory_entries:
+        for entry in directory_entries:
+            if not entry.is_file():
+                continue
+
+            variant_theme = base.copy()
+            with open(entry) as file:
+                current_config = loads(file.read())
+                for color_name, color_value in current_config.items():
+                    variant_theme[color_name] = color_value
+
+            create_theme(
+                colors=variant_theme,
+                config=config,
+                name=f"{THEME_NAME} {splitext(entry.name)[0]}",
+            )
+
 
 
 def main() -> None:

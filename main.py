@@ -87,13 +87,13 @@ def create_theme(
             theme_colors[color_scope] = color
 
     for color_name, config_groups in config.get("tokenColors", {}).items():
-        token_color = {}
         color = colors.get(color_name, None)
 
         if color is None:
             continue
 
         for config_group in config_groups:
+            token_color = {}
             settings = {}
             config_group_scope = config_group.get("scope", [])
             config_group_scope.sort()

@@ -58,6 +58,7 @@
       "editor.lineHighlightBackground"
     ],
     "blackTransluscentB": [
+      "list.hoverBackground",
       "menu.border",
       "menu.separatorBackground"
     ],
@@ -145,15 +146,16 @@
       "activityBar.foreground",
       "input.foreground",
       "statusBarItem.hoverForeground",
-      "tab.activeForeground",
-      "list.highlightForeground"
+      "tab.activeForeground"
     ],
     "whiteSemi": [
       "list.inactiveSelectionForeground",
-      "list.activeSelectionForeground"
+      "list.activeSelectionForeground",
+      "list.highlightForeground",
+      "sideBar.foreground",
+      "list.hoverForeground"
     ],
     "whiteTransluscentA": [
-      "list.hoverBackground",
       "editorBracketMatch.background",
       "statusBarItem.hoverBackground"
     ],
@@ -176,8 +178,6 @@
       "list.focusBackground"
     ],
     "whiteTransluscentE": [
-      "sideBar.foreground",
-      "list.hoverForeground",
       "sideBarSectionHeader.foreground",
       "statusBar.foreground"
     ]

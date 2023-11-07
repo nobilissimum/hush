@@ -164,6 +164,12 @@
       "editor.findMatchHighlightBackground",
       "editor.selectionBackground",
       "editor.selectionHighlightBackground",
+      "editorIndentGuide.background1",
+      "editorIndentGuide.background2",
+      "editorIndentGuide.background3",
+      "editorIndentGuide.background4",
+      "editorIndentGuide.background5",
+      "editorIndentGuide.background6",
       "editorLineNumber.foreground",
       "scrollbarSlider.activeBackground"
     ],
@@ -172,6 +178,12 @@
       "list.inactiveSelectionBackground"
     ],
     "whiteTransluscentD": [
+      "editorIndentGuide.activeBackground1",
+      "editorIndentGuide.activeBackground2",
+      "editorIndentGuide.activeBackground3",
+      "editorIndentGuide.activeBackground4",
+      "editorIndentGuide.activeBackground5",
+      "editorIndentGuide.activeBackground6",
       "gitDecoration.ignoredResourceForeground",
       "input.placeholderForeground",
       "list.focusBackground",

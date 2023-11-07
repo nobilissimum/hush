@@ -9,6 +9,8 @@ THEME_NAME = "Hush"
 THEME_FILE_EXTENSION = "-color-theme.json"
 
 def extract_color_names() -> dict:
+    print("Executing 'extract_color_names'")  # noqa: T201
+
     config = None
     with open("./src/config.json") as file:
         config = loads(file.read())
@@ -30,12 +32,18 @@ def extract_color_names() -> dict:
     return colors
 
 
-def test_colors_config(config: dict) -> None:
+def test_colors_config(config: dict | None = None) -> None:
+    print("Executing 'test_colors_config'")  # noqa: T201
+
+    if config is None:
+        with open("./src/config.json") as file:
+            config = loads(file.read())
+
     scopes = []
     scopes_with_dupes = []
 
-    for scopes in config.get("colors", {}).values():
-        for scope in scopes:
+    for config_scopes in config.get("colors", {}).values():
+        for scope in config_scopes:
             if scope not in scopes:
                 scopes.append(scope)
                 continue
@@ -44,11 +52,18 @@ def test_colors_config(config: dict) -> None:
 
     if scopes_with_dupes:
         scope_with_dupes = "\n".join(scopes_with_dupes)
-        error_message = f"Scopes:\n{scope_with_dupes}"
+        error_message = "Duplicate color keys found\n"
+        error_message += f"Scopes:\n{scope_with_dupes}"
         raise AssertionError(error_message)
 
 
-def test_token_colors_config(config: dict) -> None:
+def test_token_colors_config(config: dict | None = None) -> None:
+    print("Executing 'test_token_colors_config'")  # noqa: T201
+
+    if config is None:
+        with open("./src/config.json") as file:
+            config = loads(file.read())
+
     scopes = []
     scopes_with_dupes = []
 
@@ -65,7 +80,8 @@ def test_token_colors_config(config: dict) -> None:
 
     if scopes_with_dupes:
         scope_with_dupes = "\n".join(scopes_with_dupes)
-        error_message = f"Token scopes:\n{scope_with_dupes}"
+        error_message = "Duplicate token color keys found\n"
+        error_message += f"Token scopes:\n{scope_with_dupes}"
         raise AssertionError(error_message)
 
 
@@ -74,6 +90,11 @@ def create_theme(
     config: dict,
     name: str,
 ) -> dict:
+    print("Executing 'create_theme'")  # noqa: T201
+
+    test_colors_config(config=config)
+    test_token_colors_config(config=config)
+
     theme = {}
     theme_colors = {}
     theme_token_colors = []
@@ -118,6 +139,8 @@ def create_theme(
 
 
 def create_theme_files() -> None:
+    print("Executing 'create_theme_files'")  # noqa: T201
+
     base = None
     with open("./src/base.json") as file:
         base = loads(file.read())
@@ -152,6 +175,8 @@ def create_theme_files() -> None:
 
 
 def main() -> None:
+    print("Executing 'main'")  # noqa: T201
+
     create_theme_files()
 
 

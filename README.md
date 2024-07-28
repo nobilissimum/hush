@@ -9,5 +9,7 @@
 ## Related
 
 - [Hush for Visual Studio Code][hush-vscode]
+- [Hush for Alacritty][hush-alacritty]
 
 [hush-vscode]: https://github.com/nobilissimum/hush-vscode
+[hush-alacritty]: https://github.com/nobilissimum/hush-alacritty
